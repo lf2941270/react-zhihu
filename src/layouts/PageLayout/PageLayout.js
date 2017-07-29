@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../../components/Header'
-import { IndexLink, Link } from 'react-router'
+import Navbar from 'components/Navbar'
 import PropTypes from 'prop-types'
+import 'font-awesome/scss/font-awesome.scss'
 import './PageLayout.scss'
 
 export const PageLayout = ({ children }) => (
   <div className='container text-center'>
-    <Header></Header>
+    <Navbar></Navbar>
     <div className='page-layout__viewport'>
       {children}
     </div>

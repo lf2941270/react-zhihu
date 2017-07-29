@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const Login = (props) => (
   <div className="login-wrap">
-    Login!Haha!
+    Login!Haha!!!!!
   </div>
 )
 
