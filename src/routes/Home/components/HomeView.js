@@ -1,14 +1,12 @@
 import React from 'react'
 import Header from 'components/Header'
-import DuckImage from '../assets/Duck.jpg'
+import Banner from './Banner/Banner'
 import './HomeView.scss'
 
-export const HomeView = () => (
+export const HomeView = (props) => (
   <div>
     <Header></Header>
-    <div>
-
-    </div>
+    <Banner {...props}></Banner>
   </div>
 )
 

@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import 'font-awesome/scss/font-awesome.scss'
 import './PageLayout.scss'
 
-export const PageLayout = ({ children }) => (
+export const PageLayout = ({ children, hideNav }) => (
   <div className='container text-center'>
     <Navbar></Navbar>
-    <div className='page-layout__viewport'>
+    <div className='page-layout__viewport' onClick={hideNav}>
       {children}
     </div>
   </div>

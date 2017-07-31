@@ -1,0 +1,25 @@
+.banner {
+  width: 100%;
+  height: 220px;
+  background: #ccc;
+  .slick-slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .slick-list, .slick-track{
+      height: 100%;
+    }
+    .slick-dots{
+      position: absolute;
+      bottom: 0;
+    }
+    .slick-slide{
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+}
