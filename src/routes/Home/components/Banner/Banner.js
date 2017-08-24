@@ -4,11 +4,11 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
 import './banner.scss'
+import proxy from 'utils/proxy'
 
 export class Banner extends React.Component  {
   componentDidMount(){
     setTimeout(() => {
-      console.log(this.refs.slider)
       this.refs.slider.forceUpdate()
     }, 500)
   }
@@ -24,14 +24,25 @@ export class Banner extends React.Component  {
     }
 
     return (
+
       <div className="banner">
-        <Slider ref='slider' {...settings}>
-          {
-            this.props.banners.map((item, index) => (
-              <div key={index} style={{backgroundImage: 'url(' + item.pic + ')'}}></div>
-            ))
-          }
-        </Slider>
+        {
+          this.props.banners.length ?
+            (
+              <Slider ref='slider' {...settings}>
+                {
+                  this.props.banners.map((item, index) => (
+                    <div key={index} style={{backgroundImage: 'url(' + proxy(item.image) + ')'}}>
+                      <div className="text">
+                        {item.title}
+                      </div>
+                    </div>
+                  ))
+                }
+              </Slider>
+            )
+            : ''
+        }
       </div>
     )
   }

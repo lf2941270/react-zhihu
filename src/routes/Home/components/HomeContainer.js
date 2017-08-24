@@ -1,11 +1,14 @@
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import HomeView from './HomeView'
+import {fetchLatest} from 'actions/home'
 
 const mapStateToProps = (state) => ({
-  banners: _.range(5).map(() => ({
-    pic: 'http://placekitten.com/g/400/200'
-  }))
+  banners: state.home.top_stories || []
 })
-
-export default connect(mapStateToProps)(HomeView)
+const mapDispatchToProps = (dispatch) => ({
+  fetchLatest: () => {
+    dispatch(fetchLatest())
+  }
+})
+export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
