@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Header from 'components/Header'
 import Banner from './Banner/Banner'
+import List from './List/List'
 import './HomeView.scss'
 export class HomeView extends Component {
   componentWillMount() {
@@ -11,6 +12,7 @@ export class HomeView extends Component {
       <div>
         <Header></Header>
         <Banner {...this.props}></Banner>
+        <List {...this.props}></List>
       </div>
     )
   }

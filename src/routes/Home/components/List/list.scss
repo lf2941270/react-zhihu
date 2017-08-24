@@ -1,0 +1,40 @@
+.list-wrap{
+  text-align: left;
+  background: #f3f3f3;
+  section{
+    padding: 10px;
+    .date{
+      padding: 10px;
+      font-size: 16px;
+      color: #777;
+    }
+    ul{
+      padding: 0;
+      list-style: none;
+      li{
+        display: block;
+        margin: 10px 0;
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px -1px #999;
+        height: 100px;
+        overflow: hidden;
+        .title{
+          margin: 12px;
+          font-size: 18px;
+          overflow: hidden;
+        }
+        .image{
+          float: right;
+          margin: 10px;
+          width: 90px;
+          height: 80px;
+          overflow: hidden;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

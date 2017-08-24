@@ -4,7 +4,8 @@ import HomeView from './HomeView'
 import {fetchLatest} from 'actions/home'
 
 const mapStateToProps = (state) => ({
-  banners: state.home.top_stories || []
+  banners: state.home.top_stories || [],
+  stories: state.home.stories || []
 })
 const mapDispatchToProps = (dispatch) => ({
   fetchLatest: () => {
